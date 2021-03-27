@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.account-info {
+    display: flex;
+}
+
+form div {
+    margin-bottom: .5rem;
+}
+
+input.button--link {
+    display: inline;
+    border: none;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input.button--link:hover {
+    text-decoration: underline;
+}

@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
-    flash.now[:notice] = "Coucou je suis là"
+    if session[:user_id]
+      @user = User.find_by(id: session[:user_id])
+    end
   end
 
   def about

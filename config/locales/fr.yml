@@ -1,0 +1,12 @@
+fr:
+  errors:
+    messages:
+      blank: vide
+      confirmation: ne correspond pas
+  activerecord:
+    attributes:
+      user:
+        email: Adresse email
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+
