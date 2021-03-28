@@ -25,12 +25,17 @@ form div {
 input.button--link {
     display: inline;
     border: none;
-    color: inherit;
     background: transparent;
     cursor: pointer;
     font-size: 1em;
+    padding: 0;
+    text-decoration: underline;
 }
 
-input.button--link:hover {
-    text-decoration: underline;
+form.button_to {
+    display: inline;
+}
+
+label {
+    margin-bottom: .5rem;
 }
