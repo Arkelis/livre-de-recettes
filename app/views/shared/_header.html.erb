@@ -1,7 +1,15 @@
 <nav>
-    Navigation
-    <ul>
-        <li><a href="/">Accueil</a></li>
-        <li><%= link_to "A propos", about_path %></li>
-    </ul>
+  Navigation
+  <ul>
+  <li><a href="/">Accueil</a></li>
+  <li><%= link_to "A propos", about_path %></li>
+  <li>
+    <% unless Current.user %>
+      <%= link_to "Se connecter", login_path %>
+    <% else %>
+      Connecté en tant que <%= Current.user.email %>.
+      <%= button_to "Se déconnecter", logout_path, method: :delete, class: "button--link" %>
+    <% end %>
+  </li>
+  </ul>
 </nav>

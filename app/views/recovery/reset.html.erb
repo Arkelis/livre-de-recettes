@@ -1,13 +1,7 @@
-<h1>Inscription</h1>
+<h1>Réinitialisation du mot de passe</h1>
 
-<p><%= link_to "Connectez vous", login_path %> si vous avez déjà un compte.</p>
-
-<%= form_with(model: @user, url: register_path) do |form| %>
+<%= form_with(model: @user, url: password_reset_path(token: params[:token]), method: :post) do |form| %>
   <%= render partial: "shared/form_errors", locals: {form: form} %>
-  <div>
-    <%= form.label(:email) %>
-    <%= form.text_field(:email) %>
-  </div>
   <div>
     <%= form.label(:password) %>
     <%= form.password_field(:password) %>
@@ -17,6 +11,6 @@
     <%= form.password_field(:password_confirmation) %>
   </div>
   <div>
-    <%= form.submit("S'inscrire") %>
+    <%= form.submit("Réinitialiser le mot de passe") %>
   </div>
 <% end %>

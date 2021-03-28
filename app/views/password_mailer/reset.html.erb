@@ -1,0 +1,11 @@
+<h1>Réinitialisation du mot de passe</h1>
+
+<p>
+  Pour réinitialiser votre mot de passe, cliquez sur ce lien&nbsp;: 
+  <%= link_to "Réinitialiser le mot de passe", password_reset_url(token: @token) %>.
+</p>
+<p>
+  Ce lien est valable pendant une heure. Si vous n'êtes pas à l'origine de
+  cette demande de réinitialisation de mot de passe, ignorez ce message.
+</p>
+<p>Le site du livre de recettes.</p>

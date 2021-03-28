@@ -7,6 +7,5 @@ class User < ApplicationRecord
   # pour créer un nouvel User: 
   #   User.create({email: "nom@domain", password: "passwd", password_confirmation: "passwd"})
   validates(:email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: "doit être une adresse email valide." })
-  validates(:password, presence: true)
-  validates(:password_confirmation, presence: true)
+  validates(:password, presence: true, confirmation: true, on: :create)
 end

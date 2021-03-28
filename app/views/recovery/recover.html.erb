@@ -1,0 +1,16 @@
+<h1>Mot de passe oublié</h1>
+
+<p>
+  Entrez votre adresse mail dans le formulaire suivant. Un lien vous sera envoyé
+  pour réinitialiser votre mot de passe.
+</p>
+
+<%= form_with(url: account_recovery_path) do |form| %>
+  <div>
+    <%= form.label(:email) %>
+    <%= form.text_field(:email) %>
+  </div>
+  <div>
+    <%= form.submit("Envoyer lien de récupération") %>
+  </div>
+<% end %>

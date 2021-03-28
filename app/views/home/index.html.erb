@@ -1,10 +1,3 @@
 <h1>Livre de recettes</h1>
 
-<% if @user %>
-  <div class="account-info">
-    <strong>Bonjour ! Vous êtes connectés avec le compte <%= @user.email %>.</strong>
-    <%= button_to "Se déconnecter", logout_path, method: :delete, class: "button--link" %>
-  </div>
-<% end %>
-
 <p>Ce site contient des recettes de cuisine, qui donnent en général de bons plats.</p>
